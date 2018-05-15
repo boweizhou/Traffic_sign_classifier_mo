@@ -98,9 +98,9 @@ My final model consisted of the following layers:
 To train the model, I have played with different number for epochs and learning rate. 
 For epochs I have tried 20, 30, 40, 50, in the end I was using 40 cause it gives me the better accuracy on the test data. When epochs over 40, the validation accuracy goes down and up without improvement.
 
-For Learning rate i used 0.00097, it is smaller than what provided in original lenet code, I intended to use samller learning steps to increase the training accuracy.
+For Learning rate i used 0.0008, it is smaller than what provided in original lenet code, I intended to use samller learning steps to increase the training accuracy.
 
-batch size = 156
+batch size = 156, I am using this technique to seperate the image data to the small batch of dataset, so that it will not cause momery issues on my local computer.
 
 To improve more accuracy, more data is necessary. 
 
