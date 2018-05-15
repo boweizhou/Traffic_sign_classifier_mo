@@ -57,7 +57,7 @@ Here is all signals with label from the training set.
 
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
-As a first step, I convert the image from a 3 color RBG to a gray scale image which only include one color. Gray image seems to provide luminance which is by far more important in distinguishing visual features 
+As a first step, I convert the image from a 3 color RBG to a gray scale image which only include one color. Gray image seems to provide luminance which is by far more important in distinguishing visual features. Sermanet and LeCun using gray images gained great results and since I am running the training on my local computer without GPU, it will save a significant time for training.
 
 Here is an example of a traffic sign image before and after grayscaling.
 
@@ -65,7 +65,7 @@ Here is an example of a traffic sign image before and after grayscaling.
 ![alt text](https://github.com/boweizhou/Traffic_Sign_Classifier/blob/master/images1/original_image.png)
 ![alt text](https://github.com/boweizhou/Traffic_Sign_Classifier/blob/master/images1/gray_image.png)
 
-As next step, I normalized the image data and gain smaller numbers. 
+As next step, I normalized the image data. This will transfer the inputs to become well conditioned data to have zero mean and equal variant. This will make OPTIMIZER a lot easier to do it job later on during the training.
 
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
@@ -77,20 +77,19 @@ My final model consisted of the following layers:
 | Input         		| 32x32x1 Gray image   							| 
 | Convolution 5x5     	| 1x1 stride, VALID padding, outputs 28x28x6 	|
 | RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 14x14x6 				|
-| Convolution 5x5	    | 1x1 stride, VALID padding, outputs 10x10x16   									|
+| Max pooling	      	| 2x2 stride, inputs 28x28x6, outputs 14x14x6 				|
+| Convolution 5x5	    | 1x1 stride, VALID padding, inputs 14x14x6, outputs 10x10x16   									|
 | RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 5x5x16 				|
-| Flatten  shape = 400
-| Convolution 5x5	    | 1x1 stride, VALID padding, outputs 120  									|
+| Max pooling	      	| 2x2 stride,  inputs 10x10x16, outputs 5x5x16 				|
+| Flatten  shape | inputs 5x5x16, outputs 400
+| Fully connected   | inputs 400, outputs 120  									|
 | RELU					|												|
-| Dropout  | keep 50%
+| Dropout  | keep 50%  |
 | Fully connected		| input 120 output 84        									|
 | RELU     |   									|
+| Dropout  | keep 50%  |
 | Fully connected |  input 84 output 43
-| Softmax				| etc.        									|
-|						|												|
-|						|												|
+| logits			|         									|
  
 
 
