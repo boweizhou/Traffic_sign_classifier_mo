@@ -100,7 +100,7 @@ For epochs I have tried 20, 30, 40, 50, in the end I was using 40 cause it gives
 
 For Learning rate i used 0.0008, it is smaller than what provided in original lenet code, I intended to use samller learning steps to increase the training accuracy.
 
-batch size = 156, I am using this technique to seperate the image data to the small batch of datasets, so that it will not cause momery issues on my local computer.
+for batch size 156 is used, I am using this technique to seperate the image data to the small batch of datasets, so that it will not cause momery issues on my local computer.
 
 Adam optimizer is used, it uses moving averages of the parameters (momentum), and works very well and offen lead to better converges.
 
@@ -115,8 +115,8 @@ To improve more accuracy, more data is necessary.
 
 My final model results were:
 * training set accuracy of 1
-* validation set accuracy of 0.95 
-* test set accuracy of 0.930?
+* validation set accuracy of 0.956 
+* test set accuracy of 0.934 
 
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
@@ -125,7 +125,7 @@ I am using the same architecture as Lenet, it was given good results on recogniz
 * What were some problems with the initial architecture?
 1. The data set was small to achieve better results
 2. Need to add dropout to improve the training results
-3. Need to transfer color from RGB to gray
+3. Need to transfer color from RGB to gray to improve the training time
 4. Need to change Epochs and learning rate to achieve better results
 5. Need to add Keep_prob = 0.5 for training and Keep_prob = 1 for predection.
 
