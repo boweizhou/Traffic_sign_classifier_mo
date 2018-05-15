@@ -102,6 +102,13 @@ For Learning rate i used 0.0008, it is smaller than what provided in original le
 
 batch size = 156, I am using this technique to seperate the image data to the small batch of datasets, so that it will not cause momery issues on my local computer.
 
+Adam optimizer is used, it uses moving averages of the parameters (momentum), and works very well and offen lead to better converges.
+
+Other parameters like the following:
+mu: 0
+sigma: 0.1
+dropout keep probability: 0.5
+
 To improve more accuracy, more data is necessary. 
 
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
