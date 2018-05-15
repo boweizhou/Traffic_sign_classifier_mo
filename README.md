@@ -96,9 +96,11 @@ My final model consisted of the following layers:
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
 To train the model, I have played with different number for epochs and learning rate. 
-The more epochs I have, the better result I will have, and the accuracy improvement stopped at about 50 epochs with 95%
-The smaller learning rate I have, the slower the accuracy can increase. 
-the final paramater I used are Epochs = 50 and learning rate = 0.00097 , batch size = 156
+For epochs I have tried 20, 30, 40, 50, in the end I was using 40 cause it gives me the better accuracy on the test data. When epochs over 40, the validation accuracy goes down and up without improvement.
+
+For Learning rate i used 0.00097, it is smaller than what provided in original lenet code, I intended to use samller learning steps to increase the training accuracy.
+
+batch size = 156
 
 To improve more accuracy, more data is necessary. 
 
