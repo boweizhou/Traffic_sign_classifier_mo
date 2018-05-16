@@ -133,10 +133,10 @@ I am using the same architecture as Lenet, it was given good results on recogniz
 
 * How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
 
-- Refer to privious answer.
+Refer to privious answer.
 
 * Which parameters were tuned? How were they adjusted and why?
-- Refer to privious answer.
+Refer to privious answer.
 
 * What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
 
