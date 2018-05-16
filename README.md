@@ -120,9 +120,11 @@ My final model results were:
 
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
+
 I am using the same architecture as Lenet, it was given good results on recognize handwritten numbers. 
 
 * What were some problems with the initial architecture?
+
 1. The data set was small to achieve better results
 2. Need to add dropout to improve the training results
 3. Need to transfer color from RGB to gray to improve the training time
@@ -134,6 +136,8 @@ I am using the same architecture as Lenet, it was given good results on recogniz
 - Refer to privious answer.
 
 * Which parameters were tuned? How were they adjusted and why?
+- Refer to privious answer.
+
 * What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
 
 Other than ajusting the Epochs, batch size, and learing rate. I also changed dropout to 50%, this prevents the overfitting and improve the accuracy from 85% to 95%.
@@ -143,6 +147,7 @@ If a well known architecture was chosen:
 * What architecture was chosen?
 * Why did you believe it would be relevant to the traffic sign application?
 * How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
+ 
  Althought the leNet architecuture giving good results in this project, but this is an old type of architecture and many newer and better architectures are be developed. 
  If time allows, I would like to choose AlexNet. 
  It is based of Lenet but wider and deeper, this will allow to train network to recognize more complex object and provide much better accuracy.
