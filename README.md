@@ -165,7 +165,10 @@ Here are how image looks like when convert to gray scale.
 ![alt text](https://github.com/boweizhou/Traffic_Sign_Classifier/blob/master/images1/color_gray.png)
 
 ![alt text](https://github.com/boweizhou/Traffic_Sign_Classifier/blob/master/images1/color_to_gray1.png)
-Image4, "no vechicles", seems like difficult to recognize, cause there is not a clear pattern. 
+
+The qualities that will be difficult to be classify are not clear image(blurry) or having different image angle compare to training data. 
+To solve this kind of problem more training data set is needed.
+
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
@@ -180,54 +183,69 @@ Here are the results of the prediction:
 | Go straigt or left			| Go straigt or left     							|
 
 
-The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%. This compares favorably to the accuracy on the test set of 0.933.
+Here is the prediction results:
+Image 0 prediction: 1 , the true label is 1 .
+Image 1 prediction: 22 , the true label is 22 .
+Image 2 prediction: 35 , the true label is 35 .
+Image 3 prediction: 15 , the true label is 15 .
+Image 4 prediction: 37 , the true label is 37 .
+Image 5 prediction: 18 , the true label is 18 .
+Accuracy is 1.0
+
+The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%. And accuracy is 100%. 
+Lower the image quality might affect the test accuracy.
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
-The code for making predictions on my final model is located in the 29th cell of the Ipython notebook.
-Following are the results of the test. Accuracies for five selected signals are 100%.
+Following are the results of top 5 softmax probabilities. Accuracies for five selected signals are 100%.
 
+0 real signal is Speed limit (30km/h)
+Speed limit (30km/h) probability: 100.0
+Stop probability: 0.0
+Speed limit (70km/h) probability: 0.0
+Speed limit (20km/h) probability: 0.0
+No entry probability: 0.0
+Yield probability: 0.0
 *******************
 1 real signal is Bumpy road
-Bumpy road probability: 99.8
-Bicycles crossing probability: 0.2
-Go straight or right probability: 0.0
-Dangerous curve to the right probability: 0.0
-Children crossing probability: 0.0
-Traffic signals probability: 0.0
+Bumpy road probability: 86.43
+Traffic signals probability: 13.28
+Road work probability: 0.17
+Road narrows on the right probability: 0.06
+Bicycles crossing probability: 0.02
+General caution probability: 0.02
 *******************
 2 real signal is Ahead only
 Ahead only probability: 100.0
+Turn right ahead probability: 0.0
 Yield probability: 0.0
-Road work probability: 0.0
-Speed limit (60km/h) probability: 0.0
 Turn left ahead probability: 0.0
-Go straight or right probability: 0.0
+No passing probability: 0.0
+No vehicles probability: 0.0
 *******************
 3 real signal is No vehicles
-No vehicles probability: 64.13
-Priority road probability: 34.5
-Yield probability: 0.76
-No passing probability: 0.6
-End of all speed and passing limits probability: 0.0
-Speed limit (60km/h) probability: 0.0
+No vehicles probability: 99.46
+Priority road probability: 0.5
+Speed limit (50km/h) probability: 0.04
+Keep right probability: 0.0
+Speed limit (70km/h) probability: 0.0
+Speed limit (30km/h) probability: 0.0
 *******************
 4 real signal is Go straight or left
-Go straight or left probability: 100.0
+Go straight or left probability: 99.94
+Roundabout mandatory probability: 0.05
+Keep left probability: 0.01
+General caution probability: 0.0
 Traffic signals probability: 0.0
-Priority road probability: 0.0
-Right-of-way at the next intersection probability: 0.0
-Yield probability: 0.0
-Roundabout mandatory probability: 0.0
+Turn right ahead probability: 0.0
 *******************
 5 real signal is General caution
 General caution probability: 100.0
 Pedestrians probability: 0.0
 Traffic signals probability: 0.0
-Right-of-way at the next intersection probability: 0.0
-Speed limit (30km/h) probability: 0.0
+Road narrows on the right probability: 0.0
+Roundabout mandatory probability: 0.0
 Go straight or left probability: 0.0
-*******************
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
